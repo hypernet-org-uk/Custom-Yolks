@@ -10,7 +10,7 @@ on:
       - elixir/**
 jobs:
   push:
-    name: "Custom-Yolks:elixir_${{ matrix.tag }}"
+    name: "custom-yolks:elixir_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -39,5 +39,5 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/hypernet-org-uk/Custom-Yolks:elixir_${{ matrix.tag }}
-            ghcr.io/hypernet-org-uk/Custom-Yolks:elixir_${{ matrix.tag }}
+            ghcr.io/hypernet-org-uk/custom-yolks:elixir_${{ matrix.tag }}
+            ghcr.io/hypernet-org-uk/custom-yolks:elixir_${{ matrix.tag }}

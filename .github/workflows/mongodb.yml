@@ -11,7 +11,7 @@ on:
       - mongodb/**
 jobs:
   push:
-    name: "Custom-Yolks:mongodb_${{ matrix.tag }}"
+    name: "custom-yolks:mongodb_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -39,5 +39,5 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/hypernet-org-uk/Custom-Yolks:mongodb_${{ matrix.tag }}
-            ghcr.io/hypernet-org-uk/Custom-Yolks:mongodb_${{ matrix.tag }}
+            ghcr.io/hypernet-org-uk/custom-yolks:mongodb_${{ matrix.tag }}
+            ghcr.io/hypernet-org-uk/custom-yolks:mongodb_${{ matrix.tag }}

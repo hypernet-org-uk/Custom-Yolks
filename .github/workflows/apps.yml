@@ -10,7 +10,7 @@ on:
       - apps/**
 jobs:
   push:
-    name: "Custom-Yolks:apps_${{ matrix.app }}"
+    name: "custom-yolks:apps_${{ matrix.app }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false

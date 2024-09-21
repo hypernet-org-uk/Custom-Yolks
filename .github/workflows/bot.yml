@@ -10,7 +10,7 @@ on:
       - bot/**
 jobs:
   pushArm:
-    name: "Custom-Yolks:bot_${{ matrix.tag }}"
+    name: "custom-yolks:bot_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -50,15 +50,15 @@ jobs:
           cache-to: type=local,dest=/tmp/.buildx-cache-new
           push: true
           tags: |
-            ghcr.io/hypernet-org-uk/Custom-Yolks:bot_${{ matrix.tag }}
-            ghcr.io/hypernet-org-uk/Custom-Yolks:bot_${{ matrix.tag }}
+            ghcr.io/hypernet-org-uk/custom-yolks:bot_${{ matrix.tag }}
+            ghcr.io/hypernet-org-uk/custom-yolks:bot_${{ matrix.tag }}
       - name: Move cache
         run: |
           rm -rf /tmp/.buildx-cache
           mv /tmp/.buildx-cache-new /tmp/.buildx-cache
 
   # pushAmd:
-  #   name: "Custom-Yolks:bot_${{ matrix.tag }}"
+  #   name: "custom-yolks:bot_${{ matrix.tag }}"
   #   runs-on: ubuntu-latest
   #   strategy:
   #     fail-fast: false
@@ -83,4 +83,4 @@ jobs:
   #         platforms: linux/amd64
   #         push: true
   #         tags: |
-  #           ghcr.io/hypernet-org-uk/Custom-Yolks:bot_${{ matrix.tag }}
+  #           ghcr.io/hypernet-org-uk/custom-yolks:bot_${{ matrix.tag }}

@@ -10,7 +10,7 @@ on:
       - box64/**
 jobs:
   push:
-    name: "Custom-Yolks:${{ matrix.tag }}"
+    name: "custom-yolks:${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -35,5 +35,5 @@ jobs:
           platforms: linux/arm64
           push: true
           tags: |
-            ghcr.io/hypernet-org-uk/Custom-Yolks:${{ matrix.tag }}
-            ghcr.io/hypernet-org-uk/Custom-Yolks:${{ matrix.tag }}
+            ghcr.io/hypernet-org-uk/custom-yolks:${{ matrix.tag }}
+            ghcr.io/hypernet-org-uk/custom-yolks:${{ matrix.tag }}

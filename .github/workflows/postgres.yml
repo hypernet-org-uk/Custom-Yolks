@@ -11,7 +11,7 @@ on:
       - postgres/**
 jobs:
   push:
-    name: "Custom-Yolks:postgres_${{ matrix.tag }}"
+    name: "custom-yolks:postgres_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -42,5 +42,5 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/hypernet-org-uk/Custom-Yolks:postgres_${{ matrix.tag }}
-            ghcr.io/hypernet-org-uk/Custom-Yolks:postgres_${{ matrix.tag }}
+            ghcr.io/hypernet-org-uk/custom-yolks:postgres_${{ matrix.tag }}
+            ghcr.io/hypernet-org-uk/custom-yolks:postgres_${{ matrix.tag }}

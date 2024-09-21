@@ -10,7 +10,7 @@ on:
       - dart/**
 jobs:
   push:
-    name: "Custom-Yolks:dart_${{ matrix.tag }}"
+    name: "custom-yolks:dart_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -40,5 +40,5 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/hypernet-org-uk/Custom-Yolks:dart_${{ matrix.tag }}
-            ghcr.io/hypernet-org-uk/Custom-Yolks:dart_${{ matrix.tag }}
+            ghcr.io/hypernet-org-uk/custom-yolks:dart_${{ matrix.tag }}
+            ghcr.io/hypernet-org-uk/custom-yolks:dart_${{ matrix.tag }}

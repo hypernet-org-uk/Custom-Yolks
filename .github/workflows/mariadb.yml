@@ -11,7 +11,7 @@ on:
       - mariadb/**
 jobs:
   push:
-    name: "Custom-Yolks:mariadb_${{ matrix.tag }}"
+    name: "custom-yolks:mariadb_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -43,5 +43,5 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/hypernet-org-uk/Custom-Yolks:mariadb_${{ matrix.tag }}
-            ghcr.io/hypernet-org-uk/Custom-Yolks:mariadb_${{ matrix.tag }}
+            ghcr.io/hypernet-org-uk/custom-yolks:mariadb_${{ matrix.tag }}
+            ghcr.io/hypernet-org-uk/custom-yolks:mariadb_${{ matrix.tag }}

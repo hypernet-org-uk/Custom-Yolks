@@ -10,7 +10,7 @@ on:
       - wine/**
 jobs:
   push:
-    name: "Custom-Yolks:wine_${{ matrix.tag }}"
+    name: "custom-yolks:wine_${{ matrix.tag }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -36,5 +36,5 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/hypernet-org-uk/Custom-Yolks:wine_${{ matrix.tag }}
-            ghcr.io/hypernet-org-uk/Custom-Yolks:wine_${{ matrix.tag }}
+            ghcr.io/hypernet-org-uk/custom-yolks:wine_${{ matrix.tag }}
+            ghcr.io/hypernet-org-uk/custom-yolks:wine_${{ matrix.tag }}
