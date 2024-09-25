@@ -17,6 +17,7 @@ ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
 
 ENV UV_THREADPOOL_SIZE=0
+ENV UV_MAX_WORKERS=0
 
 STOPSIGNAL SIGINT
 
