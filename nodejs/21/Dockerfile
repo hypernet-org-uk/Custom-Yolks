@@ -20,7 +20,7 @@ ENV UV_THREADPOOL_SIZE=0
 ENV UV_MAX_WORKERS=0
 
 STOPSIGNAL SIGINT
-
+CMD ["node", "--no-worker-threads", "/entrypoint.sh"]
 COPY        --chown=container:container ./../entrypoint.sh /entrypoint.sh
 RUN         chmod +x /entrypoint.sh
 ENTRYPOINT    ["/usr/bin/tini", "-g", "--"]
